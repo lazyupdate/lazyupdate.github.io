@@ -86,15 +86,18 @@
                             </div>
                             <div class="qd-rkxx"><span id="jsxm">
                                     <script>document.write("学校" + getQueryVariable("door") + "门进(限制2次)")</script>
-                                    </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
+                                </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
                         </div>
                         <div class="ke-box lbke">
                             <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">
-                                <script>document.write("上报时间：" + new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + Math.round(new Date().getHours() - 1 - Math.random() * 1.2) + ':' + String(Math.round(new Date().getMinutes() + Math.random() * 60) % 60).padStart(2, '0'))</script>
+                                <script>
+                                    var randTime = Math.round(Math.random() * 100 + 20)
+                                    document.write("上报时间：" + new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + (new Date().getHours() - Math.floor((randTime + 60 - new Date().getMinutes()) / 60)) + ':' + String((new Date().getMinutes() - randTime + 180) % 60).padStart(2, '0'))
+                                </script>
                             </div>
                             <div class="qd-rkxx"><span id="jsxm">
                                     <script>document.write("学校" + getQueryVariable("door") + "门出(限制2次)")</script>
-                                    </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
+                                </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
                         </div>
                     </div>
                 </div>
