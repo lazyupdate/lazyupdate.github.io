@@ -59,7 +59,8 @@
         <div class="ke-box">
             <div class="qd-kename" id="kcxx">位置信息 </div>
             <div class="qd-jssj">
-                <div class="line"><span>楼宇：</span><span id="skdd">学校<script>document.write(getQueryVariable("door"))</script>门进(限制2次)</span></div>
+                <div class="line"><span>楼宇：</span><span id="skdd">
+                        <script>document.write("学校" + getQueryVariable("door") + "门进(限制2次)")</script></span></div>
                 <div class="line"><span> 日期：</span><span id="skrq">
                         <script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>
                     </span></div>
@@ -78,9 +79,12 @@
                 </div>
                 <div class="qd-lbbox" id="jrqd1">
                     <div class="ke-box lbke">
-                        <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">上报时间：<script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script></div>
-                        <div class="qd-rkxx"><span id="jsxm">学校<script>document.write(getQueryVariable("door"))</script>门出(限制2次)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span
-                                id="skjc">进入</span></div>
+                        <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">
+                            <script>document.write("上报时间：" + new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>
+                        </div>
+                        <div class="qd-rkxx"><span id="jsxm">
+                                <script>document.write("学校" + getQueryVariable("door") + "门进(限制2次)")</script>
+                                </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
                     </div>
                 </div>
             </div>
