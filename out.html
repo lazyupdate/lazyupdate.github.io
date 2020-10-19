@@ -69,27 +69,31 @@
                 <div id="sb_cg" class="qd-button" style="">上报位置成功</div>
                 <div id="sb_bcg" class="qd-button bcg" style="display:none"></div>
             </div>
-            <div class="qd-jrqd">
-                <div class="qd-tipline">
-                    <div class="tip">今日上报</div>
+            <div id="sb_jr" class="qd-button qd-jr" onclick="qiandao(1);" style="display: none;"></div>
+            <div id="sb_lk" class="qd-button qd-lk" onclick="qiandao(2);" style="display: none;"></div>
+        </div>
+    </div>
+    <div class="qd-jrqd">
+        <div class="qd-tipline">
+            <div class="tip">今日上报</div>
+        </div>
+        <div class="qd-lbbox qd-nodata" style="display: none;">
+            <img src="./assets/zanwuxiaoxi.svg" alt="">
+            <div class="qd-nodatazi">今日暂无上报记录</div>
+        </div>
+        <div class="qd-lbbox" id="jrqd1">
+            <div class="ke-box lbke">
+                <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">
+                    <script>document.write("上报时间：" + new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>
                 </div>
-                <div class="qd-lbbox qd-nodata" style="display: none;">
-                    <img src="./assets/zanwuxiaoxi.svg" alt="">
-                    <div class="qd-nodatazi">今日暂无上报记录</div>
-                </div>
-                <div class="qd-lbbox" id="jrqd1">
-                    <div class="ke-box lbke">
-                        <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">
-                            <script>document.write("上报时间：" + new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>
-                        </div>
-                        <div class="qd-rkxx"><span id="jsxm">
-                                <script>document.write("学校" + getQueryVariable("door") + "门进(限制2次)")</script>
-                                </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
-                    </div>
-                </div>
+                <div class="qd-rkxx"><span id="jsxm">
+                        <script>document.write("学校" + getQueryVariable("door") + "门进(限制2次)")</script>
+                    </span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
             </div>
         </div>
-        <div class="zi"></div>
+    </div>
+    </div>
+    <div class="zi"></div>
     </div>
 
 
